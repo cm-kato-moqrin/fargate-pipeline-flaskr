@@ -474,3 +474,10 @@ Resources:
     DependsOn:
       - ECSService
       - ServiceScaleInPolicy
+# ------------------------------------------------------------#
+#  Outputs
+# ------------------------------------------------------------#
+Outputs:
+  LoadBalancerDNSName:
+    Description: The DNSName of the ALB load balancer
+    Value: !GetAtt InternetALB.DNSName
